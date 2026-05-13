@@ -11,8 +11,8 @@ class review{
 
     async save(){
             const novoReview = new ReviweModel({
-            usuario: this.usuario,
-            restaurante: this.restaurante,
+            Usuario: this.usuario,
+            Restaurante: this.restaurante,
             nota: this.nota, 
             comentario: this.comentario
             });

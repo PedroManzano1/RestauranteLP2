@@ -8,6 +8,7 @@ import __dirname from '../utils/pathUtils.js';
 class reviewController{
 
 static async createReview(req, res) {
+  console.log("Dados recebidos do Postman:", req.body);
   try {
     const {
       usuario,
@@ -18,14 +19,12 @@ static async createReview(req, res) {
     } = req.body;
 
   
-    const novoReview = new review( 
+    const novoReview = new review(
       usuario,
       restaurante,
       nota, 
       comentario
     );
-
-
 
     await novoReview.save();
 
