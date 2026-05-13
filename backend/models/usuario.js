@@ -1,0 +1,47 @@
+import UsuarioModel from "./UsuarioSchema.js";
+
+class usuario{
+    constructor(email,senha,nome, ativo){
+        this.email = email; 
+        this.senha = senha; 
+        this.nome=nome; 
+        this.ativo= ativo; 
+    }
+
+    async save(){
+            const novoUsuario = new UsuarioModel({
+                email: this.email, 
+                senha: this.senha, 
+                nome:this.nome, 
+                ativo: this.ativo
+            });
+            return await novoUsuario.save();
+        }
+
+static async findOne(filtro) {
+    return await UsuarioModel.findOne(filtro);
+  }
+
+  static async findById(id) {
+    return await UsuarioModel.findById(id);
+  }
+
+  static async getByIdPublic(id) {
+    return await UsuarioModel.findById(id).select("email tipo foto");
+  }
+
+  static async create(dados) {
+    return await UsuarioModel.create(dados);
+  }
+static async findByEmail(email) {
+  return await UsuarioModel.findOne({ email });
+}
+
+static async delete(id) {
+  return await UsuarioModel.findByIdAndDelete(id);
+}
+
+
+
+
+}export default usuario; 
