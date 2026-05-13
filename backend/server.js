@@ -7,7 +7,8 @@ import {
     staticMiddleware, 
     urlencodedMiddleware, jsonMiddleware,
     securityMiddleware, compressionMiddlewware,
-    rateLimitMiddleware, morganMiddleware
+    rateLimitMiddleware, morganMiddleware,
+    corsMiddelware
 } from './middlewares/middlewares.js';
 import router from './routes/routes.js';
 import Database from './config/db.js';
@@ -44,6 +45,7 @@ app.use(securityMiddleware);
 app.use(compressionMiddlewware);
 //app.use(rateLimitMiddleware);
 app.use(morganMiddleware);
+app.use((corsMiddelware));
 
 
 //Registrando rotas (endpoints)

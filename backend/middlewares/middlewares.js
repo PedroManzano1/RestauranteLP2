@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import morgan from 'morgan';
+import cors from 'cors';
 
 
 //Middlewares
@@ -27,7 +28,9 @@ const rateLimitMiddleware = rateLimit({
 const logFile = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags:'a'});
 const morganMiddleware = morgan('combined', { stream: logFile});
 
-
+const corsMiddelware = cors({
+    origin: '*'
+})
 
 export {
     staticMiddleware,
@@ -36,5 +39,6 @@ export {
     securityMiddleware,
     compressionMiddlewware,
     rateLimitMiddleware,
-    morganMiddleware
+    morganMiddleware,
+    corsMiddelware
 };
