@@ -2,9 +2,24 @@
   <div class="home-container">
     <header class="hero">
       <h1>Bem-vindo ao Avaliador de Restaurantes</h1>
+      <listarRestaurante></listarRestaurante>
     </header>
   </div>
 </template>
+
+<script>
+
+import listarRestaurante from '@/components/listarRestaurante.vue';
+
+export default {
+  name: 'HomeView',
+  components: {
+    listarRestaurante
+  }
+};
+
+</script>
+
 
 <style scoped>
 .home-container {

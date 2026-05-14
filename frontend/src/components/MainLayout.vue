@@ -4,6 +4,7 @@
       <div class="links">
         <router-link to="/home">Home</router-link> |
         <router-link to="/restaurante/cadastrar">Novo Restaurante</router-link>
+
         <!-- Botão de Sair -->
         <button @click="logout" class="btn-sair">Sair</button>   
     </div>

@@ -5,6 +5,8 @@ import HomeView from '../view/HomeView.vue';
 import LoginView from '../view/loginUsuarioView.vue';
 import CadastrarUsuarioView from '../view/cadastrarUsuarioView.vue';
 import cadastrarRestauranteView from '../view/cadastrarRestauranteView.vue';
+import ListarRestaurante from '@/components/listarRestaurante.vue';
+import cadastrarReviewView from '@/view/cadastrarReviewView.vue';
 
 const routes = [
   {
@@ -36,6 +38,16 @@ const routes = [
         path: '/restaurante/cadastrar',
         name: 'cadastrarRestaurante',
         component: cadastrarRestauranteView
+      }, 
+      {
+        path: '/restaurante/listar',
+        name: 'ListarRestaurantes',
+        component: ListarRestaurante
+      },
+      {
+        path: 'review/:id',
+        name: 'cadastrarReview',
+        component: cadastrarReviewView
       }
     ]
   }

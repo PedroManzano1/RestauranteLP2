@@ -35,6 +35,12 @@ export default {
         const response = await usuarioService.login(this.usuario);
         // Salva o token gerado pelo seu backend no navegador
         localStorage.setItem('token', response.data.token); 
+
+
+      localStorage.setItem(
+        'usuario',
+        JSON.stringify(response.data.usuario)
+      );
         // Redireciona para a página inicial (ajuste a rota conforme precisar)
         this.$router.push('/home'); 
       } catch (error) {
