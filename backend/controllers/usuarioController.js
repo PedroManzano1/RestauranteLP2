@@ -57,12 +57,16 @@ export const login = async (req, res) => {
       "segredo",
       { expiresIn: "1d" }
     );
-
     res.json({
-      token,
-      email: Usuario.email,
-    });
 
+      token,
+
+      usuario: {
+        _id: Usuario._id,
+        email: Usuario.email
+      }
+
+    });
   } catch (err) {
      console.error("ERRO LOGIN:", err);
     res.status(500).json({ erro: "Erro no login" });

@@ -11,7 +11,6 @@ const restauranteSchema = new mongoose.Schema(
         descricao: {
             type: String,
             required: true,
-            unique: true,
         },
         categoria: {
             type: String,
