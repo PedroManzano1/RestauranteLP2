@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import usuarioService from '../service/usuarioService';
+import usuarioService from '../../service/usuarioService';
 
 export default {
   name: 'LoginUsuario',
@@ -33,7 +33,7 @@ export default {
     async fazerLogin() {
       try {
         const response = await usuarioService.login(this.usuario);
-        // Salva o token gerado pelo seu backend no navegador
+
         localStorage.setItem('token', response.data.token); 
 
 

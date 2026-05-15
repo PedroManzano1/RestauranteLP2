@@ -2,11 +2,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import MainLayout from '../components/MainLayout.vue';
 import HomeView from '../view/HomeView.vue';
-import LoginView from '../view/loginUsuarioView.vue';
-import CadastrarUsuarioView from '../view/cadastrarUsuarioView.vue';
-import cadastrarRestauranteView from '../view/cadastrarRestauranteView.vue';
-import ListarRestaurante from '@/components/listarRestaurante.vue';
-import cadastrarReviewView from '@/view/cadastrarReviewView.vue';
+import LoginView from '../view/Usuario/loginUsuarioView.vue';
+import CadastrarUsuarioView from '../view/Usuario/cadastrarUsuarioView.vue';
+import cadastrarRestauranteView from '../view/Restaurante/cadastrarRestauranteView.vue';
+import ListarRestaurante from '@/components/Restaurante/listarRestaurante.vue';
+import cadastrarReviewView from '@/view/Review/cadastrarReviewView.vue';
+
+import listarReview from '@/components/Review/listarReview.vue';
 
 const routes = [
   {
@@ -48,6 +50,11 @@ const routes = [
         path: 'review/:id',
         name: 'cadastrarReview',
         component: cadastrarReviewView
+      },
+      {
+        path: 'review/listar/:id',
+        name: 'ListarReview',
+        component: listarReview
       }
     ]
   }

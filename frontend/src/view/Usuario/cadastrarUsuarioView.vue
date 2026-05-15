@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CadastrarUsuario from '../components/cadastrarUsuario.vue';
+import CadastrarUsuario from '@/components/Usuario/cadastrarUsuario.vue';
 
 export default {
   name: 'CadastrarUsuarioView',

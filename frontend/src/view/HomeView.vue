@@ -9,7 +9,7 @@
 
 <script>
 
-import listarRestaurante from '@/components/listarRestaurante.vue';
+import listarRestaurante from '@/components/Restaurante/listarRestaurante.vue';
 
 export default {
   name: 'HomeView',

@@ -10,7 +10,7 @@
 
 <script>
 
-import cadastrarReview from '@/components/cadastrarReview.vue';
+import cadastrarReview from '@/components/Review/cadastrarReview.vue';
 
 
 export default {

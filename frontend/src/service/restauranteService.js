@@ -15,5 +15,9 @@ export default {
 
   editar(id, restaurante) {
     return api.put(`/restaurante/${id}`, restaurante);
+  },
+
+  buscar(id){
+    return api.get(`/restaurante/${id}`);
   }
 };

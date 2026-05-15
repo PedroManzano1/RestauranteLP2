@@ -12,8 +12,7 @@
 
 <script>
 
-import CadastrarRestaurante
-from '../components/cadastrarRestaurante.vue'
+import CadastrarRestaurante from '@/components/Restaurante/cadastrarRestaurante.vue';
 
 export default {
 

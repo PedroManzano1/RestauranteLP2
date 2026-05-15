@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import usuarioService from '../service/usuarioService';
+import usuarioService from '@/service/usuarioService';
 
 export default {
   name: 'CadastrarUsuario',

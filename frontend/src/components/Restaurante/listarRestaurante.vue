@@ -18,6 +18,10 @@
         Avaliar Restaurante
       </button>
 
+      <button @click="abrirListaReview(restaurante._id)">
+        Abrir Avaliações 
+      </button>
+
     </div>
 
   </div>
@@ -47,6 +51,9 @@ export default {
     },
     abrirReview(id) {
         this.$router.push(`/app/review/${id}`);
+    }, 
+    abrirListaReview(id) {
+        this.$router.push(`/app/review/listar/${id}`);
     }
   },
   mounted() {
