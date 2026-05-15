@@ -50,6 +50,22 @@ static async createReview(req, res) {
         }
     }
 
+
+static async buscarReviewsPorRestaurante(req, res) {
+    try {
+
+        const { id } = req.params;
+
+        const reviews = await review.findByRestaurante(id);
+
+        res.json(reviews);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Erro ao buscar reviews" });
+    }
+}
+
    
 static async updateReview(req, res) {
   try {

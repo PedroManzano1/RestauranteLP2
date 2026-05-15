@@ -15,11 +15,11 @@ const reviewSchema = new mongoose.Schema(
     },
     nota: {
         type: Number,
-        default: true,
+        required: true,
     },
     comentario: {
         type: String,
-        default: true,
+        required: true,
     },
 
     },

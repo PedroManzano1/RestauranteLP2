@@ -18,7 +18,14 @@ class review{
             });
             return await novoReview.save();
         }
-     
+    
+        static async findByRestaurante(restauranteId) {
+            return await ReviweModel.find({
+                Restaurante: restauranteId
+            });
+        }
+
+        
         static async findAll() {
             return await ReviweModel.find();
         }

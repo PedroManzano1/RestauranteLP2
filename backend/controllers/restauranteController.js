@@ -16,12 +16,7 @@ static async createRestaurante(req, res) {
       cnpj
 
     } = req.body;
-
-
-
         const restauranteExistente = await restaurante.findByCnpj(cnpj);
-     
-    
             if (restauranteExistente) {
         
                 return res.status(400).json({ message: 'Restaurante já cadastrado.' });
@@ -59,7 +54,7 @@ static async createRestaurante(req, res) {
     });
   }
 }
-    static async getAllRestaurante(req, res) {
+static async getAllRestaurante(req, res) {
         try {
             const Restaurante = await restaurante.findAll();
             res.json(Restaurante);
@@ -67,7 +62,19 @@ static async createRestaurante(req, res) {
             console.error('Erro ao carregar os restaurante:', error);
             res.status(500).json({message: 'Erro interno ao buscar restaurante'})
         }
-    }
+}
+
+static async buscarRestaurante(req, res) {
+        try {
+            const {id} = req.params; 
+            const Restaurante = await restaurante.findById(id);
+            res.json(Restaurante);
+        } catch (error) {
+            console.error('Erro ao carregar os restaurante:', error);
+            res.status(500).json({message: 'Erro interno ao buscar restaurante'})
+        }
+}
+
 
    
 static async updateRestaurante(req, res) {
